@@ -1,353 +1,325 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>CISOs Network</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>CISOs Network - The Inner Circle</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/fav_icon.jpg" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Dewi
-  * Updated: Aug 30 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QS2RJ8L28L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<body class="index-page">
 
-  gtag('config', 'G-QS2RJ8L28L');
-</script>
+<video autoplay muted loop id="background-video">
+  <source src="assets/video/videotube.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
 
-<body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-between">
+  <header id="header" class="header d-flex align-items-center px-3 fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a class="nav-link scrollto" href="#hero">CISOs Network</a></h1>
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <h1 class="sitename">CISOs Network</h1>
+      </a>
 
-      <nav id="navbar" class="navbar">
+      <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#Strategy">Strategy</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#contact">Get Started</a></li>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
+  <main class="main">
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
-      <h1>Teamed Up in Cutting-Edge Defense</h1>
-      <h2>Leading the way in AI-powered Cybersecurity Strategies.</h2>
-      <div class="d-flex">
-        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-      </div>
-    </div>
-  </section><!-- End Hero -->
+    <!-- Hero Section -->
+    <section id="hero" class="hero section transparent-background">
 
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-        <div class="row">
-          <div class="col-lg-6 video-box align-self-baseline" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/3.png" class="img-fluid" alt="">
+      <div class="container text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>The Inner Circle<br></h2>
+            <p>An Exclusive Black Card of Cybersecurity</p>
           </div>
-          <div class="col-lg-6 pt-3 pt-lg-0 content">
-            <h3>Empowering Cybersecurity Excellence Through AI Integration.</h3>
-            <p class="fst-italic">
-              At CISOs Network, cybersecurity expertise meets cutting-edge AI innovation. Our mission is to empower businesses with the synergy of human wisdom and artificial intelligence.
+
+          <div class="col-lg-5 hero-newsletter">
+            <p>A private club designed for the world’s most influential individuals and organizations.</p>
+            <form action="https://formspree.io/f/mdkakzlo" method="POST" onsubmit="return validateEmail(event)" class="php-email-form">
+              <div class="newsletter-form"><input type="email" placeholder="Business Email" name="email" id="email"><input type="submit" value="Join waitlist"></div>
+              <!-- <div class="loading">Loading</div> -->
+              <div class="error-message"></div>
+              <div class="sent-message">Your request has been sent. Thank you!</div>
+            </form>
+          </div>
+
+          <div class="social-links">
+            <a href="#"><i class="bi bi-shield-check"></i></a>
+            <a href="#"><i class="bi bi-award"></i></a>
+            <a href="#"><i class="bi bi-key"></i></a>
+            <a href="#"><i class="bi bi-lock"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section transparent-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>It’s not a Service. It’s a Membership.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
+            <h3>Exclusivity, prestige, and trust for the Business Elite.</h3>
+            <p>
+              The Inner Circle is an exclusive membership designed for top-tier business leaders.  Members gain direct access to expert knowledge and immediate issue resolution.
             </p>
-            <ul>
-              <li><i class="bx bx-check-double"></i> <b>Unrivaled Expertise</b>: Benefit from our team of elite CISOs with proven experience safeguarding organizations.</li>
-              <li><i class="bx bx-check-double"></i> <b>AI-Powered Precision</b>: Our AI-driven solutions offer predictive analysis, and adaptive defenses, staying one step ahead of cyber adversaries.</li>
-              <li><i class="bx bx-check-double"></i> <b>Customized Solutions</b>: Our services blend human intelligence and AI to create bespoke cybersecurity strategies aligned with your business objectives.</li>
-              <li><i class="bx bx-check-double"></i> <b>Proactive Protection</b>: Our holistic security framework ensures your digital assets are fortified against emerging risks before they disrupt your operations.</li>
-            </ul>
+          </div>
+
+          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-briefcase"></i>
+                <h4><a href="" class="stretched-link">Exclusive community</a></h4>
+                <p>Join a select network of peers, sharing insights and experiences in a confidential setting.</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-gem"></i>
+                <h4><a href="" class="stretched-link">Personalized experience</a></h4>
+                <p>Your time is precious. Your security should be effortless.</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-clipboard-check"></i>
+                <h4><a href="" class="stretched-link">Tangible benefits</a></h4>
+                <p>Enjoy exclusive access to curated events, threat intelligence reports, and personalized professional assessments.</p>
+              </div><!-- Icon-Box -->
+
+              <div class="col-md-6 icon-box position-relative">
+                <i class="bi bi-shield-lock"></i>
+                <h4><a href="" class="stretched-link">Discreet communication</a></h4>
+                <p>Communicate through secure and encrypted channels, with the option to maintain anonymity.</p>
+              </div><!-- Icon-Box -->
+
+            </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End About Section -->
 
+    </section><!-- /About Section -->
 
-    <!-- ======= About Boxes Section ======= -->
-    <section id="about-boxes" class="about-boxes">
-      <div class="container" data-aos="fade-up">
+    <!-- Contact Section -->
+    <section id="contact" class="contact section transparent-background">
 
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="card">
-              <img src="assets/img/about-boxes-1.jpg" class="card-img-top" alt="...">
-              <div class="card-icon">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a class="nav-link scrollto" href="#about-boxes">Our Mission</a></h5>
-                <p class="card-text">To deliver unparalleled cybersecurity solutions by uniting the expertise of seasoned CISOs with the cutting-edge power of artificial intelligence. </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="card">
-              <img src="assets/img/about-boxes-2.jpg" class="card-img-top" alt="...">
-              <div class="card-icon">
-                <i class="bi bi-columns-gap"></i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a class="nav-link scrollto" href="#about-boxes">Our Plan</a></h5>
-                <p class="card-text">We agree that AIs won't take our jobs, but someone using AI will. That's why we merge CISOs expertise with AIs to create unparalleled cybersecurity solutions through continuous optimization.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <img src="assets/img/about-boxes-3.jpg" class="card-img-top" alt="...">
-              <div class="card-icon">
-                <i class="bi bi-file-earmark-medical"></i>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a class="nav-link scrollto" href="#about-boxes">Our Vision</a></h5>
-                <p class="card-text">To set new standards for excellence. We aspire to be the Go-to resource for businesses seeking the perfect blend of human expertise and AI-driven innovation. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- End About Boxes Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="Strategy" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Approach</h2>
-          <p>Check our Strategy</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="bi bi-graph-up-arrow"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Maximizing AI Investments</a></h4>
-              <p>According to Forbes, 76% of enterprises prioritize AI in their IT budgets. We ensure your AI investments are leveraged effectively, avoiding wasted resources.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-people"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Building Confidence Through Collaboration</a></h4>
-              <p>We establish a robust network of CISOs who collaborate and share best practices. This fosters security confidence among clients, allowing them to focus on their core business.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-filetype-ai"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Results-Driven AI Solutions</a></h4>
-              <p>We don't sell AI directly; we deliver results and solutions powered by AI, tailored to each company's unique organizational context.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-unity"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Expertise Enhanced by AI</a></h4>
-              <p>We provide access to AI technologies and cybersecurity experts, offering results grounded in years of experience, amplified by AI capabilities.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-cash-stack"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Cost-Effective Access to CISOs</a></h4>
-              <p>Our subscription-based pricing models offer cost-effective alternatives to full-time hires, providing on-demand access to a diverse team of skilled CISOs.</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="bi bi-shield-check"></i>
-              <h4><a class="nav-link scrollto" href="#Strategy">Cybersecurity AI-Enabled Strategies</a></h4>
-              <p>Develop and execute a comprehensive cybersecurity strategy harnessing AI capabilities to identify threats, prevent attacks, and enhance risk-based business decision-making.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- End Services Section -->
-
-    <!-- ======= Contact Section ======= -->
-
-    <section id="contact" class="about-boxes">
-    <!-- <section id="contact" class="contact"> -->
-      <div class="container" data-aos="fade-up">
-
-    <div class=" section-title">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>
-        <p>Contact Us</p>
-      </div>
+        <p>Elevate Your Expectations. Experience the Difference</p>
+      </div><!-- End Section Title -->
 
-              <div class="row justify-content-center">
+      <div class="container" data-aos="fade" data-aos-delay="100">
 
-          <div class="col-lg-3 col-md-5 mb-5 mb-md-0">
-            <div class="info">
-              <div class="address">
-                <i class="bx bx-map"></i>
-                <p>London.<br>UK.</p>
-              </div>
+        <div class="row gy-4">
 
-              <div class="email">
-                <i class="bx bx-envelope"></i>
-                <p>info@cisosnetwork.ai</p>
+          <div class="col-lg-4">
+
+            <div class="info-item d-flex">
+              <i class="bi bi-chat-left-dots"></i>
+              <div>
+                <h3>Join The Inner Circle</h3>
+                <p>Your trusted advisor is ready to provide clarity and peace of mind.</p>
               </div>
             </div>
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Or Email Us</h3>
+                <p>members@theinnercircle.us</p>
+              </div>
+            </div><!-- End Info Item -->
+
           </div>
 
-                    <div class="col-lg-5 col-md-7">
-                        <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> -->
-                        <form action="https://formsubmit.co/info@cisosnetwork.ai" method="post">
-                            <!-- class="php-email-form" role="form" class="php-email-form" -->
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="https://www.cisosnetwork.ai/">
-                          <input type="hidden" name="_template" value="table">
-                            <div class="form-group">
-                                <input title="Complete this field" type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input title="Complete this field" type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input title="Complete this field" type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" title="Complete this field" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="my-3">
-                            </div>
-                            <div class="text-center php-email-form"><button type="submit">Send Message</button></div>
+          <!-- End Contact Form -->
 
+          <div class="col-lg-8">
+            <form action="https://formspree.io/f/mdkakzlo" method="POST" onsubmit="return validateEmail(event)" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
 
-                        </form>
-                    </div>
+                <!-- <iframe src="https://tally.so/embed/w74LXR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" width="500" height="500"></iframe> -->
 
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Business Email" required="">
+                </div>
+
+                <!-- <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div> -->
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div> -->
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Join waitlist</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div><!-- End Contact Form -->
 
         </div>
-      </div>
-    </section>
 
-    <!-- End Contact Section -->
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
-  
-  <!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>CISOs Network</h3>
-              <p>
-
-                <strong>Email:</strong> info@cisosnetwork.ai<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="https://www.linkedin.com/in/leramos00/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                <a href="https://www.linkedin.com/company/cisos-network" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#home">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#Strategy">Strategy</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="payments.html">Payments Methods</a></li>
-            </ul>
-          </div>
-
-            <!-- <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form> -->
-          </div>
-        </div>
-      </div>
-    </div>
+ 
+  <footer id="footer" class="footer transparent-background">
 
     <div class="container">
-      <div class="copyright">
-        &copy; CISOs Network by <a href="https://www.security-sense.com/">Security Sense</a>. All Rights Reserved.
-      </div>
+      <div class="row gy-3">
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Maundy</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> and modified by Security Sense.
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> and modified by CISOs Network.
       </div>
     </div>
+
   </footer>
 
-  <!-- End Footer -->
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Preloader -->
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
-  <!-- Template Main JS File -->
+  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<script>
+function validateEmail(event) {
+    event.preventDefault();
+    const form = event.target;
+    const emailInput = form.querySelector('input[name="email"]');
+    const email = emailInput.value.trim();
+    const errorMessage = form.querySelector('.error-message');
+    const sentMessage = form.querySelector('.sent-message');
+
+    // Limpiar mensajes previos
+    errorMessage.classList.remove('d-block');
+    sentMessage.classList.remove('d-block');
+
+    // Función para mostrar mensajes temporizados
+    function showTimedMessage(element, message) {
+        element.textContent = message;
+        element.classList.add('d-block');
+        setTimeout(() => {
+            element.classList.remove('d-block');
+        }, 4000);
+    }
+
+    // Validación 1: Email vacío
+    if (!email) {
+        showTimedMessage(errorMessage, "Please enter a valid email address.");
+        return false;
+    }
+
+    // Validación 2: Formato básico de email
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showTimedMessage(errorMessage, "Invalid email format.");
+        return false;
+    }
+
+    // Validación 3: Dominios no permitidos (lista negra)
+    const blockedDomains = [
+        'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com',
+        'protonmail.com', 'icloud.com', 'aol.com', 'mail.com',
+        'yandex.com', 'zoho.com', 'gmx.com', 'live.com', 'test.com'
+    ];
+    const domain = email.split('@')[1]?.toLowerCase();
+    
+    if (blockedDomains.includes(domain)) {
+        showTimedMessage(errorMessage, "Please use your organization email.");
+        return false;
+    }
+
+    // Envío del formulario
+    const formData = new FormData(form);
+    
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {'Accept': 'application/json'}
+    })
+    .then(response => {
+        if (response.ok) {
+            showTimedMessage(sentMessage, "Your request has been sent. Thank you!");
+            form.reset();
+        } else {
+            throw new Error('Submission failed');
+        }
+    })
+    .catch(error => {
+        showTimedMessage(errorMessage, "Error submitting form. Please try again.");
+        console.error(error);
+    });
+}
+</script>
 
 </body>
 
