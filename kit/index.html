@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CISOs Network | Executive Briefing Access</title>
+  <meta
+    name="description"
+    content="Un brief ejecutivo de CISOs Network para líderes que enfrentan riesgo cibernético, exposición a la IA y decisiones de alto impacto."
+  >
+  <meta name="theme-color" content="#050816">
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-soft: rgba(9, 14, 31, 0.78);
+      --card: rgba(10, 17, 37, 0.72);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text: #f4f7fb;
+      --muted: rgba(232, 238, 247, 0.72);
+      --subtle: rgba(232, 238, 247, 0.5);
+      --accent: #9ec6ff;
+      --accent-strong: #d7e7ff;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+      --radius-xl: 28px;
+      --radius-lg: 18px;
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "SF Pro Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 18%, rgba(60, 88, 138, 0.28), transparent 30%),
+        radial-gradient(circle at 82% 18%, rgba(97, 122, 170, 0.18), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(50, 70, 118, 0.25), transparent 36%),
+        linear-gradient(180deg, #08101f 0%, #050816 44%, #03050c 100%);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 42vw;
+      height: 42vw;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    body::before {
+      top: -16vw;
+      left: -12vw;
+      background: rgba(73, 110, 170, 0.3);
+      animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    body::after {
+      right: -14vw;
+      bottom: -18vw;
+      background: rgba(120, 140, 188, 0.18);
+      animation: drift 22s ease-in-out infinite alternate-reverse;
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .panel {
+      width: min(100%, var(--max-width));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+        var(--bg-soft);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      overflow: hidden;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 700px;
+    }
+
+    .hero,
+    .insight {
+      padding: 56px;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 44px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.85s ease forwards;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.05);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .brand-mark img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .brand-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--accent-strong);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      width: fit-content;
+      margin-bottom: 22px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.85s ease 0.12s forwards;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffffff, var(--accent));
+      box-shadow: 0 0 18px rgba(158, 198, 255, 0.8);
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 11ch;
+      font-size: clamp(3.2rem, 7vw, 6rem);
+      line-height: 0.98;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.95s ease 0.2s forwards;
+    }
+
+    .lede {
+      max-width: 620px;
+      margin: 26px 0 0;
+      font-size: clamp(1.05rem, 1.9vw, 1.3rem);
+      line-height: 1.7;
+      color: var(--muted);
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.95s ease 0.34s forwards;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 40px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.95s ease 0.46s forwards;
+    }
+
+    .button,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 0.96rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .button {
+      color: #07101e;
+      background: linear-gradient(180deg, #f8fbff 0%, #d9e9ff 100%);
+      box-shadow: 0 14px 30px rgba(174, 203, 255, 0.18);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .button:hover,
+    .button-secondary:hover {
+      transform: translateY(-2px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 64px;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.95s ease 0.58s forwards;
+    }
+
+    .stat {
+      padding: 18px 18px 20px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    .stat-value {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--accent-strong);
+    }
+
+    .stat-copy {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .insight {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015)),
+        rgba(5, 9, 20, 0.36);
+    }
+
+    .meta-card,
+    .quote-card,
+    .redirect-card {
+      border-radius: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.85s ease forwards;
+    }
+
+    .meta-card { animation-delay: 0.22s; }
+    .quote-card { animation-delay: 0.36s; }
+    .redirect-card { animation-delay: 0.5s; }
+
+    .meta-label,
+    .redirect-label {
+      margin: 0 0 12px;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--subtle);
+    }
+
+    .meta-title {
+      margin: 0 0 10px;
+      font-size: 1.4rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .meta-copy,
+    .redirect-copy {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .quote-card blockquote {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.4vw, 1.95rem);
+      line-height: 1.35;
+      letter-spacing: -0.035em;
+      color: var(--text);
+    }
+
+    .quote-card p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+
+    .redirect-status {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 18px 0 14px;
+      color: var(--accent-strong);
+      font-size: 0.96rem;
+    }
+
+    .pulse {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d9e9ff;
+      box-shadow: 0 0 0 0 rgba(217, 233, 255, 0.55);
+      animation: pulse 1.9s infinite;
+    }
+
+    .countdown {
+      margin: 0;
+      font-size: 2.35rem;
+      line-height: 1;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .countdown span {
+      font-size: 0.95rem;
+      color: var(--subtle);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+
+    .footnote {
+      margin: 14px 0 0;
+      color: var(--subtle);
+      font-size: 0.84rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1080px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        padding: 18px;
+      }
+
+      .hero,
+      .insight {
+        padding: 28px;
+      }
+
+      .brand {
+        margin-bottom: 28px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .button-secondary {
+        width: 100%;
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes drift {
+      from {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+
+      to {
+        transform: translate3d(4vw, 2vw, 0) scale(1.08);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(217, 233, 255, 0.55);
+      }
+
+      70% {
+        box-shadow: 0 0 0 14px rgba(217, 233, 255, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(217, 233, 255, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="panel" aria-label="Acceso al executive kit">
+      <div class="grid">
+        <div class="hero">
+          <div>
+            <div class="brand">
+              <span class="brand-mark">
+                <img src="/assets/img/logo.png" alt="CISOs Network logo">
+              </span>
+              <span class="brand-copy">
+                <span class="brand-label">Acceso Privado</span>
+                <span class="brand-name">CISOs Network</span>
+              </span>
+            </div>
+
+            <div class="eyebrow">The Inner Circle</div>
+            <h1>Claridad estratégica para decisiones cibernéticas de alto impacto.</h1>
+            <p class="lede">
+              Un brief ejecutivo de CISOs Network para líderes que deben responder
+              a la exposición creciente a la IA, al riesgo cibernético y a decisiones
+              que no admiten ambigüedad ni demora.
+            </p>
+
+            <div class="actions">
+              <a class="button" href="/AI%20Decision%20Readiness%20%E2%80%94%20Executive%20Kit%E2%84%A2.pdf">
+                Abrir Executive Kit
+              </a>
+              <a class="button-secondary" href="/#contact">
+                Hablar con CISOs Network
+              </a>
+            </div>
+          </div>
+
+          <div class="stats" aria-label="Aspectos destacados del executive kit">
+            <article class="stat">
+              <span class="stat-value">Contexto</span>
+              <p class="stat-copy">Un marco breve y preciso para entender el momento actual de riesgo y decisión.</p>
+            </article>
+            <article class="stat">
+              <span class="stat-value">Claridad</span>
+              <p class="stat-copy">Una lectura enfocada para líderes que necesitan criterio, no más información.</p>
+            </article>
+            <article class="stat">
+              <span class="stat-value">Confianza</span>
+              <p class="stat-copy">Una experiencia alineada con el estándar de discreción y rigor de CISOs Network.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="insight">
+          <section class="meta-card">
+            <p class="meta-label">Qué encontrarás</p>
+            <h2 class="meta-title">Una lectura ejecutiva para ordenar el riesgo antes de decidir.</h2>
+            <p class="meta-copy">
+              El Executive Kit sintetiza señales clave sobre exposición a la IA,
+              riesgo cibernético y preparación organizacional, en un formato pensado
+              para conversaciones de dirección y toma de decisiones.
+            </p>
+          </section>
+
+          <section class="quote-card">
+            <blockquote>
+              En entornos de alta incertidumbre, la calidad de la decisión importa tanto como la velocidad.
+            </blockquote>
+            <p>
+              El Executive Kit fue diseñado para aportar una lectura ejecutiva,
+              directa y relevante para quienes deben actuar con criterio bajo presión.
+            </p>
+          </section>
+
+          <section class="redirect-card" aria-live="polite">
+            <p class="redirect-label">Dirigido a</p>
+            <div class="redirect-status">
+              <span class="pulse" aria-hidden="true"></span>
+              <span>Líderes que deben decidir con criterio bajo presión</span>
+            </div>
+            <p class="redirect-copy">
+              CEOs, miembros de junta, founders, inversionistas y responsables
+              ejecutivos que necesitan una lectura breve, sólida y accionable
+              antes de avanzar una conversación más profunda.
+            </p>
+            <p class="footnote">
+              Si el enfoque resuena con tu contexto, abre el Executive Kit desde el botón principal.
+            </p>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function() {
+      // Manual-access page by design. No automatic redirect.
+    })();
+  </script>
+</body>
+</html>
